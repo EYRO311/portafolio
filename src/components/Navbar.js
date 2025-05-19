@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'; // Usa este en lugar de HashLink para r
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5 }}
 >
-  <div className="navbar-logo">MiLogo</div>
+  <div className="navbar-logo">EYRO</div>
 </motion.div>
 
 function Navbar() {
@@ -19,7 +19,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link to="/">MiLogo</Link>
+          <Link to="/">EYRO</Link>
         </div>
         <Scrollspy
           items={['hero', 'projects', 'Music']}

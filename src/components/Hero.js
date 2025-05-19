@@ -52,7 +52,7 @@ function Hero() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="description"
         >
-          Transforming ideas into interactive and seamless digital experiences with cutting-edge <span className="highlight">frontend</span> development.
+          Transforming ideas into functional, scalable, and elegant web solutions <span className="highlight">fullstack</span> development.
         </motion.p>
 
         <div className="tech-scroll-container">
