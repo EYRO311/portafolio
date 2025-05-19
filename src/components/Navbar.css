@@ -1,0 +1,115 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px 30px;
+  background: rgba(17, 17, 17, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid #222;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  padding-top: 20px;
+  background-color: transparent;
+}
+
+/* Enlaces del navbar */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  color: rgb(6, 48, 214);
+  font-weight: bold;
+}
+
+/* Íconos sociales */
+.navbar-icons a {
+  color: white;
+  font-size: 18px;
+  margin-left: 16px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.navbar-icons a:hover {
+  transform: scale(1.2);
+  color: #1db954;
+}
+
+/* Responsive - solo se muestra en pantallas grandes */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar-logo a {
+  font-weight: bold;
+  font-size: 20px;
+  color: #1db954;
+  text-decoration: none;
+  animation: popin 0.6s ease;
+}
+
+@keyframes popin {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Fondo animado tipo ruido */
+.animated-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.012;
+  z-index: 1;
+  animation: moveNoise 0.4s infinite;
+}
+
+@keyframes moveNoise {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1100px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #222;
+  border-radius: 30px;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

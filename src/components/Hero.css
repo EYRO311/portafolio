@@ -1,0 +1,118 @@
+.hero {
+  text-align: center;
+  padding: 100px 20px 80px;
+  color: white;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.01), rgba(0,0,0,0.95));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.name {
+  color: #1db954;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+.title span {
+  display: block;
+  font-weight: bold;
+}
+
+.description {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.highlight {
+  color: #a88aff;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: white;
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 10px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.social-icons a:hover {
+  background: #1db954;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  font-size: 32px;
+  color: #ccc;
+}
+
+/* For each tech pair (icon + text) */
+.tech-pair {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  font-size: 1.5rem;
+  color: #ccc;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+  flex-shrink: 0;  /* ✅ Esto evita que se colapsen */
+}
+
+
+.tech-icon-scroll {
+  margin-top: 2rem;
+  overflow-x: hidden;
+  display: block;
+  white-space: nowrap;
+}
+
+/* Efecto hover más marcado */
+.tech-pair:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  color: #1db954;
+}
+
+/* Esto es crucial */
+.tech-icon-scroll span {
+  display: inline-block !important;
+  white-space: nowrap;
+}
+
+.tech-row {
+  display: flex !important;
+  gap: 3rem; /* Más espacio entre íconos */
+  padding: 0 4rem; /* Padding para evitar corte */
+}
+
+
+.tech-scroll-container {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+    width: 100vw;
+  margin-left: -50%;
+  padding: 2rem 0;
+}
