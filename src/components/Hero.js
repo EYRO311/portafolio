@@ -7,17 +7,19 @@ import {
   SiJavascript,
   SiTypescript,
   SiNextdotjs,
+  SiAngular,
+  SiReact,
+  SiPython
 } from 'react-icons/si';
 
 import './Hero.css';
-import ParticlesBackground from './ParticlesBackground';
 import ScrollVelocity from './ScrollVelocity';
 
 function Hero() {
   return (
     <section id="hero" className="hero" style={{ position: 'relative' }}>
-      <ParticlesBackground />
-      <div style={{ position: 'relative', zIndex: 1 }}>
+
+      <div style={{ zIndex: 1 }}>
         <motion.p
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -66,6 +68,9 @@ function Hero() {
                 <div className="tech-pair"><SiTypescript /></div>
                 <div className="tech-pair"><SiCss3 /></div>
                 <div className="tech-pair"><SiJavascript /></div>
+                <div className="tech-pair"><SiAngular /></div>
+                <div className="tech-pair"><SiReact /></div>
+                <div className="tech-pair"><SiPython /></div>
                 {/* Agrega más íconos aquí */}
               </>
             ]}

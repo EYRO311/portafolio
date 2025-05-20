@@ -1,11 +1,13 @@
-// src/components/ParticlesBackground.js
-import { useCallback } from 'react';
-import { loadFull } from 'tsparticles';
-import Particles from 'react-tsparticles';
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
+import { useTheme } from "../utils/ThemeContext";
 
 function ParticlesBackground() {
+  const { darkMode } = useTheme();
+
   const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
+    await loadSlim(engine);
   }, []);
 
   return (
@@ -13,28 +15,33 @@ function ParticlesBackground() {
       id="tsparticles"
       init={particlesInit}
       options={{
-        fullScreen: { enable: false },
-        background: { color: '#000' },
+        fullScreen: { enable: true, zIndex: -1 },
+        background: {
+          color: { value: "transparent" },
+        },
         particles: {
-          color: { value: '#ffffff' },
-          number: { value: 30 },
-          opacity: { value: 0.1 },
-          size: { value: 1.5 },
-          move: { enable: true, speed: 0.3 },
-        },
-        interactivity: {
-          events: {
-            onHover: { enable: true, mode: 'repulse' },
+          color: { value: darkMode ? "#000000" : "#ffffff" },
+          links: {
+            enable: true,
+            color: darkMode ? "#00aaff" : "#888888",
+            distance: 150,
+            opacity: 0.3,
+            width: 1,
           },
+          move: {
+            enable: true,
+            speed: 1,
+            outModes: { default: "bounce" },
+          },
+          number: {
+            value: 50,
+            density: { enable: true, area: 800 },
+          },
+          opacity: { value: 0.5 },
+          shape: { type: "circle" },
+          size: { value: { min: 1, max: 3 } },
         },
-      }}
-      style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        zIndex: 0,
-        width: '100%',
-        height: '100%',
+        detectRetina: true,
       }}
     />
   );

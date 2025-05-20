@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import './Navbar.css';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; // Usa este en lugar de HashLink para rutas completas
+import { useTheme } from "../utils/ThemeContext";
 
 <motion.div
   initial={{ opacity: 0, y: -20 }}
@@ -12,11 +13,11 @@ import { Link } from 'react-router-dom'; // Usa este en lugar de HashLink para r
 >
   <div className="navbar-logo">EYRO</div>
 </motion.div>
-
+ 
 function Navbar() {
+  const { darkMode, toggleTheme } = useTheme();
   return (
-    
-    <nav className="navbar">
+    <nav className={`navbar ${darkMode ? "dark" : "light"}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/">EYRO</Link>
@@ -40,6 +41,12 @@ function Navbar() {
           <a href="mailto:tuemail@dominio.com" target="_blank" rel="noreferrer"><FaEnvelope /></a>
         </div>
       </div>
+      <div className="navbar-toggle">
+        <button onClick={toggleTheme}>
+          {darkMode ? "☀️ Claro" : "🌙 Oscuro"}
+        </button>
+      </div>
+
     </nav>
   );
 }
