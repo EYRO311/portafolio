@@ -16,26 +16,28 @@ function AppContainer() {
     <div className={`App ${darkMode ? 'dark' : 'light'}`}>
       <ParticlesBackground darkMode={darkMode} />
       <Router>
-        <Navbar />
-        <Sidebar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <div className="main-content">
-                <section id="hero"><Hero /></section>
-                <section id="projects"><Proyectos /></section>
-                <section id="Music"><SpotifyPlayer /></section>
-              </div>
-            }
-          />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/about" element={<SobreMi />} />
-        </Routes>
+        <div className="content-wrapper">
+          <Navbar />
+          <Sidebar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="main-content">
+                  <section id="hero"><Hero /></section>
+                  <section id="projects"><Proyectos /></section>
+                  <section id="Music"><SpotifyPlayer /></section>
+                </div>
+              }
+            />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/about" element={<SobreMi />} />
+          </Routes>
 
-        <footer style={{ padding: "20px", textAlign: "center", color: "#888" }}>
-          © 2025 EYRO. Hecho con React.
-        </footer>
+          <footer style={{ padding: "20px", textAlign: "center", color: "#888" }}>
+            © 2025 EYRO. Hecho con React.
+          </footer>
+        </div>  
       </Router>
     </div>
   );

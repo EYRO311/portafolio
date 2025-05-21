@@ -1,16 +1,20 @@
 .hero {
-  height: 100vh;
+  min-height: 100%;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(2px); /* si quieres un efecto suave */
+  backdrop-filter: blur(2px);
   background: transparent;
   position: relative;
   z-index: 1;
   text-align: center;
+  padding: 4rem 2rem;
 }
+
 
 .intro {
   font-size: 1.2rem;
@@ -36,7 +40,7 @@
   max-width: 700px;
   margin: 20px auto;
   font-size: 1.1rem;
-  color: #ccc;
+  color: inherit;
 }
 
 .highlight {
@@ -118,4 +122,24 @@
   overflow: hidden;
   padding: 1.5rem 0;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .tech-pair {
+    font-size: 1.2rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .tech-row {
+    gap: 1rem;
+  }
 }

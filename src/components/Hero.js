@@ -25,6 +25,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="intro"
+          aling="center"
         >
           Hi, I'm <span className="name">Emiliano Yahel Ruiz Oropeza</span>
         </motion.p>
