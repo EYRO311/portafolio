@@ -15,7 +15,7 @@ import { useTheme } from "../utils/ThemeContext";
 </motion.div>
  
 function Navbar() {
-  const { darkMode, toggleTheme } = useTheme();
+  const { darkMode   } = useTheme();
   return (
     <nav className={`navbar ${darkMode ? "dark" : "light"}`}>
       <div className="navbar-container">
@@ -41,12 +41,6 @@ function Navbar() {
           <a href="mailto:tuemail@dominio.com" target="_blank" rel="noreferrer"><FaEnvelope /></a>
         </div>
       </div>
-      <div className="navbar-toggle">
-        <button onClick={toggleTheme}>
-          {darkMode ? "☀️ Claro" : "🌙 Oscuro"}
-        </button>
-      </div>
-
     </nav>
   );
 }

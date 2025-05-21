@@ -15,7 +15,7 @@ function ParticlesBackground({ darkMode }) {
         fullScreen: { enable: true, zIndex: -1 },
         background: {
           color: {
-            value: "transparent",
+            value: darkMode ? "#ffffff":"#000000",
           },
         },
         particles: {
@@ -27,7 +27,7 @@ function ParticlesBackground({ darkMode }) {
             },
           },
           color: {
-            value: darkMode ? "#01aaff" : "#000000", // azul en oscuro, negro en claro
+            value: darkMode ? "#ff00ff" : "#ff00ff",
           },
           links: {
             enable: true,

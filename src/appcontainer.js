@@ -10,7 +10,7 @@ import ParticlesBackground from './components/ParticlesBackground';
 import { useTheme } from "./utils/ThemeContext";
 
 function AppContainer() {
-  const { darkMode } = useTheme();
+  const { darkMode, toggleTheme } = useTheme();
 
   return (
     <div className={`App ${darkMode ? 'dark' : 'light'}`}>
@@ -38,6 +38,9 @@ function AppContainer() {
             © 2025 EYRO. Hecho con React.
           </footer>
         </div>  
+        <button className="theme-toggle" onClick={toggleTheme}>
+          {darkMode ? "☀️" : "🌙"}
+        </button>
       </Router>
     </div>
   );
