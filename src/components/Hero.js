@@ -15,10 +15,13 @@ import {
 import './Hero.css';
 import ScrollVelocity from './ScrollVelocity';
 
-function Hero() {
-  return (
-    <section id="hero" className="hero" style={{ position: 'relative' }}>
+import { useTheme } from "../utils/ThemeContext";
 
+
+function Hero() {
+  const { darkMode   } = useTheme();
+  return (
+<section id="hero" className={`hero ${darkMode ? "dark" : "light"}`} style={{ position: 'relative' }}>
       <div style={{ zIndex: 1 }}>
         <motion.p
           initial={{ opacity: 0, y: -10 }}
@@ -40,7 +43,11 @@ function Hero() {
             2000,
             '',
             1000,
-            'Javascript Specialist',
+            'Javascript Developer',
+            2000,
+            '',
+            1000,
+            'Phyton Developer',
             2000,
           ]}
           wrapper="h1"

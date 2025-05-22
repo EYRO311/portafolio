@@ -20,32 +20,32 @@ function ParticlesBackground({ darkMode }) {
         },
         particles: {
           number: {
-            value: 50,
+            value: 70,
             density: {
               enable: true,
               area: 800,
             },
           },
           color: {
-            value: darkMode ? "#ff00ff" : "#ff00ff",
+            value: darkMode ? "#249be7" : "#249be7",
           },
           links: {
             enable: true,
-            color: darkMode ? "#01aaff" : "#000000",
-            distance: 150,
-            opacity: 0.3,
+            color: darkMode ? "#000000" : "#ffffff",
+            distance: 100,
+            opacity: .8,
             width: 1,
           },
           move: {
             enable: true,
-            speed: 1.2,
+            speed: 1.5,
             direction: "none",
             outModes: {
               default: "bounce",
             },
           },
           opacity: {
-            value: 0.5,
+            value: 1,
           },
           shape: {
             type: "circle",
